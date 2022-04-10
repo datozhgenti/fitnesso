@@ -1,0 +1,248 @@
+$gray:#eef0f4;
+$blue:#081158;
+@mixin topBottomPad($top, $bottom) {
+    padding-top: $top!important;
+    padding-bottom: $bottom!important;
+}
+
+@mixin blueButton {
+    background-color: $blue!important;
+    color: white;
+    background: url("./assets/Vector.svg") no-repeat 3% 50%;
+    width: 170px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: .5s;
+    text-decoration: none;
+    text-transform: capitalize;
+    @include topBottomPad(10px,
+    10px);
+    &:hover {
+        padding-left: 50px;
+        background-position: 23% 50%;
+        opacity: .7;
+    }
+}
+
+@mixin grid($gridTemplateColumns) {
+    display: grid;
+    grid-template-columns: $gridTemplateColumns;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Red+Hat+Display:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes bodyopacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide_h1_animation {
+    from {
+        top: 100px;
+    }
+    to {
+        top: 20px
+    }
+}
+
+@keyframes img_rotate {
+    from {
+        transform: rotate(5deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+body {
+    margin: 0;
+    font-family: 'Red Hat Display', sans-serif;
+    opacity: 0;
+    animation: bodyopacity 1.5s ease 0s 1 forwards;
+    overflow-x: hidden;
+    width: 101%;
+}
+
+.pad {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+nav {
+    background-color: $gray;
+    display: grid;
+    grid-template-columns: 100px 550px;
+    justify-content: space-between;
+    align-items: center;
+    @include topBottomPad(10px,
+    10px);
+    position: sticky;
+    top: 0;
+    text-transform: capitalize;
+    z-index: 5;
+    ul {
+        list-style-type: none;
+        font-weight: 600;
+        li {
+            display: inline-block;
+            &:nth-child(4) a {
+                @include blueButton();
+            }
+            &:last-child {
+                padding: 20px;
+                cursor: pointer;
+            }
+        }
+        a {
+            text-decoration: none;
+            color: $blue;
+            padding: 20px;
+            display: block;
+        }
+    }
+}
+
+.slider {
+    display: grid;
+    background-color: $gray;
+    grid-template-columns: 47% 47%;
+    justify-content: space-between;
+    overflow: hidden;
+    @include topBottomPad(50px,
+    100px);
+    h1 {
+        text-align: center;
+        font-family: 'Permanent Marker', cursive;
+        font-size: 64px;
+        color: #8ea5a0;
+        position: relative;
+        z-index: 1;
+        top: 100px;
+        animation: slide_h1_animation 2s ease 0s 1 forwards;
+        text-transform: capitalize;
+    }
+    img {
+        border-radius: 10px;
+        position: relative;
+        z-index: 2;
+        transform: rotate(5deg);
+        animation: img_rotate 1s ease 0s 1 forwards;
+    }
+    .slider_photo_wrapper {
+        position: relative;
+        overflow: hidden;
+    }
+    .arrows {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        z-index: 4;
+        bottom: 50px;
+    }
+    .arrow_left,
+    .arrow_right {
+        background-color: rgba(8, 17, 88, 0.2);
+        padding: 40px;
+        border-radius: 50%;
+        border: 2px solid $blue;
+        cursor: pointer;
+    }
+    .slider_text {
+        color: $blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+            &:first-of-type {
+                font-size: 14px;
+            }
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 72px;
+            font-weight: 900;
+        }
+        a {
+            text-decoration: none;
+            text-transform: capitalize;
+            @include blueButton();
+            padding-left: 15px;
+        }
+    }
+}
+
+.statistic {
+    background-color: $blue;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    transform: rotate(356deg);
+    margin-top: -75px;
+    .cards_wrapper {
+        @include grid(121px 121px 121px);
+        justify-content: space-around;
+        @include topBottomPad(80px,
+        80px);
+        h3 {
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+        p {
+            font-size: 14px;
+        }
+        transform: rotate(4deg);
+    }
+}
+
+.coaching {
+    @include topBottomPad(150px,
+    150px);
+    text-align: center;
+    h2 {
+        color: $blue;
+        font-size: 64px;
+        padding: 0 22%;
+        margin-bottom: 30px;
+    }
+    a {
+        @include blueButton();
+        display: inline-block;
+        width: 215px;
+    }
+    .coaching_card_wrapper {
+        @include grid(47% 47%);
+        @include topBottomPad(50px,
+        50px);
+        justify-content: space-between;
+        gap: 50px;
+        color: $blue;
+        img {
+            border-radius: 5px;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            box-shadow: #7979ca 0px 0px 20px 0px;
+        }
+        h4 {
+            font-size: 40px;
+            margin-bottom: 5px;
+        }
+        .coaching_card_text {
+            padding: 0 121px;
+            p {
+                font-weight: 900;
+            }
+        }
+    }
+}
