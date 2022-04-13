@@ -120,6 +120,8 @@ nav ul li:nth-child(4) a {
   transition: .5s;
   text-decoration: none;
   text-transform: capitalize;
+  padding-left: 15px;
+  display: block;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
 }
@@ -246,6 +248,8 @@ nav ul a {
   transition: .5s;
   text-decoration: none;
   text-transform: capitalize;
+  padding-left: 15px;
+  display: block;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
   padding-left: 15px;
@@ -313,6 +317,8 @@ nav ul a {
   transition: .5s;
   text-decoration: none;
   text-transform: capitalize;
+  padding-left: 15px;
+  display: block;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
   display: inline-block;
@@ -360,5 +366,187 @@ nav ul a {
 
 .coaching .coaching_card_wrapper .coaching_card_text p {
   font-weight: 900;
+}
+
+.blue_text {
+  color: #081158;
+  margin-bottom: 30px;
+  font-weight: 900;
+}
+
+.blue_btn {
+  background-color: #081158 !important;
+  color: white;
+  background: url("./assets/Vector.svg") no-repeat 3% 50%;
+  width: 170px;
+  font-size: 20px;
+  border-radius: 5px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding-left: 15px;
+  display: block;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.blue_btn:hover {
+  padding-left: 50px;
+  background-position: 23% 50%;
+  opacity: .7;
+}
+
+.paddingTopBottom {
+  padding-top: 150px !important;
+  padding-bottom: 150px !important;
+}
+
+.font90 {
+  font-size: 90px;
+}
+
+.font20 {
+  font-size: 20px;
+}
+
+.header_text {
+  width: 60%;
+}
+
+.flex_start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.space_between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.workouts {
+  background-color: #eef0f4;
+}
+
+.workouts .workout_card_img img {
+  display: block;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.workouts .space_between p:last-child {
+  font-family: 'Permanent Marker', cursive;
+  color: #ec8675;
+}
+
+.workouts .workout_card_text {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 0 0 15px 15px;
+}
+
+.workout_card:hover {
+  opacity: .7;
+  -webkit-transform: translate(0, -10px);
+          transform: translate(0, -10px);
+}
+
+.workout_card {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+a {
+  text-decoration: none;
+}
+
+.grid_three_columns {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 450px 450px 450px;
+      grid-template-columns: 450px 450px 450px;
+  margin-top: 100px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#workouts2 {
+  background-color: #081158;
+  background-image: url("./assets/Lines.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+#workouts2_h2,
+#workouts2_p {
+  color: #fff;
+}
+
+#workouts2_btn {
+  background-color: #fff !important;
+  color: #081158 !important;
+  background-image: url("./assets/VectorBlack.svg");
+}
+
+.sweat {
+  height: 390px;
+  background-image: url("./assets/lines2.svg"), url("./assets/training-group.png");
+  background-repeat: no-repeat, repeat-y;
+  background-size: auto, 110%;
+  background-position: 0 -240px, 0;
+  position: relative;
+}
+
+.sweat h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 64px;
+  font-family: 'Permanent Marker', cursive;
+  color: #fff;
+}
+
+.benefit {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 47% 47%;
+      grid-template-columns: 47% 47%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.benefit h2 {
+  font-size: 64px;
+}
+
+.benefit .benefit_img {
+  text-align: center;
+  background-color: #081158;
+  background-image: url("./assets/shapes.svg");
+}
+
+.benefit .benefit_img img {
+  margin-bottom: -40px;
+  margin-top: 30px;
+  border-radius: 15px;
 }
 /*# sourceMappingURL=styles.css.map */

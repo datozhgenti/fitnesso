@@ -1,5 +1,6 @@
 $gray:#eef0f4;
 $blue:#081158;
+$pink:#ec8675;
 @mixin topBottomPad($top, $bottom) {
     padding-top: $top!important;
     padding-bottom: $bottom!important;
@@ -15,6 +16,8 @@ $blue:#081158;
     transition: .5s;
     text-decoration: none;
     text-transform: capitalize;
+    padding-left: 15px;
+    display: block;
     @include topBottomPad(10px,
     10px);
     &:hover {
@@ -27,6 +30,10 @@ $blue:#081158;
 @mixin grid($gridTemplateColumns) {
     display: grid;
     grid-template-columns: $gridTemplateColumns;
+}
+
+@mixin font($size) {
+    font-size: $size;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Red+Hat+Display:wght@300&display=swap');
@@ -243,6 +250,139 @@ nav {
             p {
                 font-weight: 900;
             }
+        }
+    }
+}
+
+.blue_text {
+    color: $blue;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+.blue_btn {
+    @include blueButton();
+}
+
+.paddingTopBottom {
+    @include topBottomPad(150px,
+    150px);
+}
+
+.font90 {
+    @include font(90px);
+}
+
+.font20 {
+    @include font(20px)
+}
+
+.header_text {
+    width: 60%;
+}
+
+.flex_start {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.space_between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.workouts {
+    background-color: $gray;
+    .workout_card_img {
+        img {
+            display: block;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+    }
+    .space_between p:last-child {
+        font-family: 'Permanent Marker', cursive;
+        color: $pink;
+    }
+    .workout_card_text {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 0 0 15px 15px;
+    }
+}
+
+.workout_card:hover {
+    opacity: .7;
+    transform: translate(0, -10px);
+}
+
+.workout_card {
+    transition: .5s;
+}
+
+a {
+    text-decoration: none;
+}
+
+.grid_three_columns {
+    @include grid(450px 450px 450px);
+    margin-top: 100px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#workouts2 {
+    background-color: $blue;
+    background-image: url("./assets/Lines.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+#workouts2_h2,
+#workouts2_p {
+    color: #fff;
+}
+
+#workouts2_btn {
+    background-color: #fff!important;
+    color: $blue!important;
+    background-image: url("./assets/VectorBlack.svg");
+}
+
+.sweat {
+    height: 390px;
+    background-image: url("./assets/lines2.svg"), url("./assets/training-group.png");
+    background-repeat: no-repeat, repeat-y;
+    background-size: auto, 110%;
+    background-position: 0 -240px, 0;
+    position: relative;
+    h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include font(64px);
+        font-family: 'Permanent Marker', cursive;
+        color: #fff;
+    }
+}
+
+.benefit {
+    @include grid(47% 47%);
+    justify-content: space-between;
+    h2 {
+        @include font(64px);
+    }
+    .benefit_img {
+        text-align: center;
+        background-color: $blue;
+        background-image: url("./assets/shapes.svg");
+        img {
+            margin-bottom: -40px;
+            margin-top: 30px;
+            border-radius: 15px;
         }
     }
 }
