@@ -256,7 +256,7 @@ nav {
 
 .blue_text {
     color: $blue;
-    margin-bottom: 30px;
+    margin-bottom: 30px!important;
     font-weight: 900;
 }
 
@@ -384,5 +384,104 @@ a {
             margin-top: 30px;
             border-radius: 15px;
         }
+    }
+}
+
+.meal {
+    background-image: url("./assets/drink.jpeg");
+    background-position: 0 -800px;
+    height: 760px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .meal_form {
+        background-color: #cfddee;
+        height: 465px;
+        border-radius: 10px;
+        padding: 100px;
+        text-align: center;
+        .meal_form_header {
+            padding: 0 19%;
+        }
+        h2 {
+            @include font(64px);
+        }
+        form {
+            @include grid(33% 33% 33%);
+            justify-content: space-between;
+            height: 60px;
+            input {
+                width: 100%;
+            }
+            & input:last-child {
+                border: none;
+                text-align: start;
+                padding-left: 25px;
+                cursor: pointer;
+                &:hover {
+                    padding-left: 120px;
+                }
+            }
+            input[placeholder] {
+                border: none;
+                padding: 8px 30px;
+                color: $blue;
+                background-color: rgba(32, 52, 146, 0.1);
+                &:focus {
+                    outline: none;
+                }
+                &::placeholder {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+
+#workouts_header {
+    align-items: center;
+    #header_text {
+        text-align: center;
+        a {
+            margin: 0 auto;
+            width: 250px;
+        }
+    }
+}
+
+.tricks {
+    .workout_card {
+        position: relative;
+    }
+    .workout_card_text {
+        width: 390px;
+        border-radius: 15px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 5%;
+    }
+    h6 {
+        position: absolute;
+        top: -20%;
+        left: 0;
+        background-color: #cfddee;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 15px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+}
+
+#tricks_flex_start {
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+    p {
+        font-family: 'Red Hat Display', sans-serif;
+        color: $blue;
+        font-weight: 900;
+        font-size: 12px;
     }
 }

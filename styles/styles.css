@@ -370,7 +370,7 @@ nav ul a {
 
 .blue_text {
   color: #081158;
-  margin-bottom: 30px;
+  margin-bottom: 30px !important;
   font-weight: 900;
 }
 
@@ -548,5 +548,141 @@ a {
   margin-bottom: -40px;
   margin-top: 30px;
   border-radius: 15px;
+}
+
+.meal {
+  background-image: url("./assets/drink.jpeg");
+  background-position: 0 -800px;
+  height: 760px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.meal .meal_form {
+  background-color: #cfddee;
+  height: 465px;
+  border-radius: 10px;
+  padding: 100px;
+  text-align: center;
+}
+
+.meal .meal_form .meal_form_header {
+  padding: 0 19%;
+}
+
+.meal .meal_form h2 {
+  font-size: 64px;
+}
+
+.meal .meal_form form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33% 33% 33%;
+      grid-template-columns: 33% 33% 33%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 60px;
+}
+
+.meal .meal_form form input {
+  width: 100%;
+}
+
+.meal .meal_form form input:last-child {
+  border: none;
+  text-align: start;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+.meal .meal_form form input:last-child:hover {
+  padding-left: 120px;
+}
+
+.meal .meal_form form input[placeholder] {
+  border: none;
+  padding: 8px 30px;
+  color: #081158;
+  background-color: rgba(32, 52, 146, 0.1);
+}
+
+.meal .meal_form form input[placeholder]:focus {
+  outline: none;
+}
+
+.meal .meal_form form input[placeholder]::-webkit-input-placeholder {
+  color: #081158;
+}
+
+.meal .meal_form form input[placeholder]:-ms-input-placeholder {
+  color: #081158;
+}
+
+.meal .meal_form form input[placeholder]::-ms-input-placeholder {
+  color: #081158;
+}
+
+.meal .meal_form form input[placeholder]::placeholder {
+  color: #081158;
+}
+
+#workouts_header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#workouts_header #header_text {
+  text-align: center;
+}
+
+#workouts_header #header_text a {
+  margin: 0 auto;
+  width: 250px;
+}
+
+.tricks .workout_card {
+  position: relative;
+}
+
+.tricks .workout_card_text {
+  width: 390px;
+  border-radius: 15px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  bottom: 5%;
+}
+
+.tricks h6 {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  background-color: #cfddee;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#tricks_flex_start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+#tricks_flex_start p {
+  font-family: 'Red Hat Display', sans-serif;
+  color: #081158;
+  font-weight: 900;
+  font-size: 12px;
 }
 /*# sourceMappingURL=styles.css.map */
