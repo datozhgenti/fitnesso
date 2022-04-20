@@ -485,3 +485,100 @@ a {
         font-size: 12px;
     }
 }
+
+.grid4_400px {
+    @include grid(400px 400px 400px 400px);
+}
+
+.social_networks {
+    background-color: $gray;
+    .pictures_wrapper {
+        justify-content: space-between;
+        width: 120%;
+        margin-left: 300px;
+        img {
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    }
+    .social_media_links {
+        background-color: #ec8675;
+        height: 283.64px;
+        transform: rotate(2deg);
+        margin-top: -25px;
+        justify-content: center;
+    }
+    .social_media_links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            @include grid(60px 130px);
+            align-items: center;
+            font-size: 30px;
+            color: #ffffff;
+            font-weight: 900;
+            padding: 0 50px;
+        }
+    }
+    #pictures_wrapper2 {
+        margin-left: -700px;
+    }
+}
+
+footer {
+    @include topBottomPad(100px,
+    100px);
+    background-color: $blue;
+    color: #ffff;
+    font-weight: 900;
+    .footer_top {
+        @include grid(33.33% 33.33% 33.33%);
+    }
+    a {
+        display: block;
+        color: #ffffff;
+        cursor: pointer;
+        transition: .5s opacity;
+        &:nth-of-type(1) {
+            margin-bottom: 15px;
+        }
+        &:not(.email) {
+            margin-bottom: 10px;
+        }
+        @include font(30px);
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    h6 {
+        margin-bottom: 15px;
+        @include font(15px);
+        font-weight: 100;
+        text-transform: uppercase;
+    }
+    .footer_bottom {
+        @include grid(45px 45px 45px 45px 45px);
+        gap: 60px;
+        margin-top: 70px;
+        & div {
+            height: 28.84px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
+.justify_flex_start {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
