@@ -144,6 +144,87 @@ nav ul a {
   display: block;
 }
 
+nav .cart {
+  width: 320px;
+  height: 342.28px;
+  position: fixed;
+  background-color: #ffffff;
+  top: 70px;
+  right: 60px;
+  border-radius: 15px;
+  -webkit-box-shadow: black 0px 0px 20px 0px;
+          box-shadow: black 0px 0px 20px 0px;
+  -webkit-animation: cart_animation .5s linear 0s 1 forwards;
+          animation: cart_animation .5s linear 0s 1 forwards;
+  display: none;
+}
+
+nav .cart .cart_header {
+  padding: 16px 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 15%;
+}
+
+nav .cart .cart_items_wrapper {
+  height: 75%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav .cart .cart_items_wrapper h5 {
+  font-size: 25px;
+}
+
+nav .cart .cart_items_wrapper p {
+  color: #081158;
+}
+
+@-webkit-keyframes cart_animation {
+  from {
+    -webkit-transform: translate(0, -10px);
+            transform: translate(0, -10px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes cart_animation {
+  from {
+    -webkit-transform: translate(0, -10px);
+            transform: translate(0, -10px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.center_elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.text_center {
+  text-align: center;
+}
+
 .slider {
   display: -ms-grid;
   display: grid;
@@ -721,15 +802,10 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.social_networks .social_media_links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -747,6 +823,12 @@ a {
   color: #ffffff;
   font-weight: 900;
   padding: 0 50px;
+  -webkit-transition: .5s opacity;
+  transition: .5s opacity;
+}
+
+.social_networks .social_media_links a:hover {
+  opacity: .6;
 }
 
 .social_networks #pictures_wrapper2 {
