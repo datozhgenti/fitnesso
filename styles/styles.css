@@ -183,6 +183,10 @@ nav .cart .cart_items_wrapper p {
   color: #081158;
 }
 
+.active {
+  color: #0043ff;
+}
+
 @-webkit-keyframes cart_animation {
   from {
     -webkit-transform: translate(0, -10px);
@@ -619,6 +623,17 @@ a {
   font-size: 64px;
 }
 
+.benefit ol {
+  list-style-type: decimal-leading-zero;
+  list-style-position: inside;
+}
+
+.benefit ol li::marker {
+  font-family: 'Permanent Marker', cursive;
+  color: #8ea5a0;
+  font-size: 25px;
+}
+
 .benefit .benefit_img {
   text-align: center;
   background-color: #081158;
@@ -629,6 +644,10 @@ a {
   margin-bottom: -40px;
   margin-top: 30px;
   border-radius: 15px;
+  width: 480px;
+  height: 480px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .meal {
@@ -918,5 +937,35 @@ footer .footer_bottom img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+#about_page_header {
+  background-image: url("./assets/Green_Lines.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.video_wrapper {
+  padding: 0 20px;
+  position: relative;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.video_wrapper:hover {
+  opacity: .8;
+}
+
+.video_wrapper .play_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #fff;
 }
 /*# sourceMappingURL=styles.css.map */

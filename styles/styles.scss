@@ -145,6 +145,10 @@ nav {
     }
 }
 
+.active {
+    color: #0043ff;
+}
+
 @keyframes cart_animation {
     from {
         transform: translate(0, -10px);
@@ -423,6 +427,15 @@ a {
     h2 {
         @include font(64px);
     }
+    ol {
+        list-style-type: decimal-leading-zero;
+        list-style-position: inside;
+        li::marker {
+            font-family: 'Permanent Marker', cursive;
+            color: #8ea5a0;
+            font-size: 25px;
+        }
+    }
     .benefit_img {
         text-align: center;
         background-color: $blue;
@@ -431,6 +444,9 @@ a {
             margin-bottom: -40px;
             margin-top: 30px;
             border-radius: 15px;
+            width: 480px;
+            height: 480px;
+            object-fit: cover;
         }
     }
 }
@@ -631,4 +647,30 @@ footer {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+}
+
+#about_page_header {
+    background-image: url("./assets/Green_Lines.svg");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.video_wrapper {
+    padding: 0 20px;
+    position: relative;
+    transition: .5s;
+    &:hover {
+        opacity: .8;
+    }
+    .play_btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 1px solid #fff;
+    }
 }
