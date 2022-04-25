@@ -968,4 +968,38 @@ footer .footer_bottom img {
   background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid #fff;
 }
+
+header {
+  background-color: #eef0f4;
+  position: relative;
+}
+
+.h_text {
+  height: 200px;
+  background-color: #cfddee;
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+}
+
+.h_text h1 {
+  color: #081158;
+}
+
+.background img:first-child {
+  height: 700px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.background img:last-child {
+  position: absolute;
+  bottom: 0;
+  right: 60px;
+}
 /*# sourceMappingURL=styles.css.map */
