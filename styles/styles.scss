@@ -76,7 +76,6 @@ body {
     opacity: 0;
     animation: bodyopacity 1.5s ease 0s 1 forwards;
     overflow-x: hidden;
-    width: 101%;
 }
 
 .pad {
@@ -99,6 +98,7 @@ nav {
     ul {
         list-style-type: none;
         font-weight: 600;
+        z-index: 7;
         li {
             display: inline-block;
             &:nth-child(4) a {
@@ -127,6 +127,7 @@ nav {
         box-shadow: black 0px 0px 20px 0px;
         animation: cart_animation .5s linear 0s 1 forwards;
         display: none;
+        z-index: 7;
         .cart_header {
             padding: 16px 24px;
             align-items: center;
@@ -221,6 +222,7 @@ nav {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-bottom: 20px;
         p {
             &:first-of-type {
                 font-size: 14px;
@@ -246,7 +248,6 @@ nav {
     color: white;
     font-weight: 900;
     text-align: center;
-    transform: rotate(356deg);
     margin-top: -75px;
     .cards_wrapper {
         @include grid(121px 121px 121px);
@@ -260,7 +261,6 @@ nav {
         p {
             font-size: 14px;
         }
-        transform: rotate(4deg);
     }
 }
 
@@ -407,8 +407,8 @@ a {
 .sweat {
     height: 390px;
     background-image: url("./assets/lines2.svg"), url("./assets/training-group.png");
-    background-repeat: no-repeat, repeat-y;
-    background-size: auto, 110%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
     background-position: 0 -240px, 0;
     position: relative;
     h2 {
@@ -445,7 +445,7 @@ a {
             margin-bottom: -40px;
             margin-top: 30px;
             border-radius: 15px;
-            width: 480px;
+            width: 70%;
             height: 480px;
             object-fit: cover;
         }
@@ -455,12 +455,10 @@ a {
 .meal {
     background-image: url("./assets/drink.jpeg");
     background-position: 0 -800px;
-    height: 760px;
     background-repeat: no-repeat;
     background-size: cover;
     .meal_form {
         background-color: #cfddee;
-        height: 465px;
         border-radius: 10px;
         padding: 100px;
         text-align: center;
@@ -491,6 +489,7 @@ a {
                 padding: 8px 30px;
                 color: $blue;
                 background-color: rgba(32, 52, 146, 0.1);
+                border-radius: 5px;
                 &:focus {
                     outline: none;
                 }
@@ -557,6 +556,7 @@ a {
 
 .social_networks {
     background-color: $gray;
+    overflow-x: hidden;
     .pictures_wrapper {
         justify-content: space-between;
         width: 120%;
@@ -565,6 +565,7 @@ a {
             height: 400px;
             object-fit: cover;
             border-radius: 15px;
+            padding: 10px;
         }
     }
     .social_media_links {
@@ -576,6 +577,7 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         a {
             @include grid(60px 130px);
             align-items: center;
@@ -792,4 +794,272 @@ header {
 
 .border_radius {
     border-radius: 10px;
+}
+
+.burger_btn_wrapper {
+    display: none;
+}
+
+.responsive_nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 6;
+    height: 100%;
+    width: 280px;
+    background-color: #cfddee;
+    li {
+        display: block;
+    }
+}
+
+.slideIn {
+    animation: slideIn .5s ease-in-out forwards;
+}
+
+.slideOut {
+    animation: slideOut .5s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        right: -100%;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        right: 0;
+    }
+    to {
+        right: -100%;
+    }
+}
+
+@media (max-width:320px) {
+    .coaching h2 {
+        font-size: 9vw!important;
+    }
+}
+
+@media (max-width:334px) {
+    nav .cart .cart_items_wrapper {
+        padding: 0 5px!important;
+    }
+}
+
+@media (max-width:364px) {
+    footer a {
+        font-size: 25px!important;
+    }
+}
+
+@media (max-width:378px) {
+    footer {
+        padding-left: 23px!important;
+    }
+}
+
+@media (max-width:400px) {
+    .cart {
+        width: 70%!important;
+        right: 30px!important;
+    }
+}
+
+@media (max-width:432px) {
+    .pad {
+        padding-left: 20px!important;
+        padding-right: 20px!important;
+    }
+}
+
+@media (max-width:508px) {
+    .statistic .cards_wrapper {
+        grid-template-columns: 121px!important;
+        .statistic_card {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width:528px) {
+    .tricks .workout_card_text {
+        width: 90%!important;
+    }
+}
+
+@media (max-width:535px) {
+    .footer_bottom {
+        gap: 10px!important;
+    }
+    .coaching {
+        padding: 150px 0!important;
+        .coaching_card img {
+            width: 100%!important;
+        }
+    }
+}
+
+@media (max-width:554px) and (min-width:321px) {
+    .coaching h2 {
+        font-size: 10vw!important;
+    }
+}
+
+@media (max-width:574px) {
+    .coaching h2 {
+        font-size: 10vw!important;
+    }
+    .meal_form h2 {
+        font-size: 10vw!important;
+    }
+    .meal_form_header p {
+        font-size: 5vw!important;
+    }
+    .meal_form {
+        padding: 50px!important;
+    }
+}
+
+@media (max-width:632px) {
+    .slider_text h2 {
+        font-size: 10vw!important;
+    }
+}
+
+@media (max-width:637px) {
+    .benefit h2 {
+        font-size: 10vw!important;
+    }
+}
+
+@media (max-width:668px) {
+    .coaching_card_text {
+        padding: 0;
+    }
+}
+
+@media (max-width:700px) {
+    .footer_top {
+        grid-template-columns: 100%!important;
+        row-gap: 40px;
+    }
+}
+
+@media (max-width:770px) {
+    .meal_form form {
+        grid-template-columns: 100%!important;
+        row-gap: 5px;
+        height: initial!important;
+        input[placeholder] {
+            padding-left: 15px!important;
+            height: 43px;
+        }
+    }
+}
+
+@media (max-width:792px) {
+    .nav_links_wrapper ul li:not(:last-child) {
+        display: none;
+    }
+    nav {
+        grid-template-columns: 100px 109.72px;
+    }
+    .nav_links_wrapper {
+        display: flex;
+        align-items: center;
+    }
+    .burger_btn_wrapper {
+        display: block;
+    }
+}
+
+@media (max-width:811px) {
+    .font90 {
+        font-size: 10vw!important;
+    }
+    .header_text {
+        width: auto!important;
+    }
+}
+
+@media (max-width:860px) {
+    .meal_form_header {
+        padding: 0!important;
+    }
+}
+
+@media (max-width:886px) {
+    .coaching h2 {
+        padding: 0!important;
+    }
+}
+
+@media (max-width:912px) {
+    .coaching_card_wrapper {
+        grid-template-columns: 70%!important;
+        justify-content: center!important;
+    }
+}
+
+@media (max-width:1106px) {
+    .social_media_links {
+        height: initial!important;
+        a {
+            padding: 111px 50px!important;
+        }
+    }
+}
+
+@media (max-width:1018px) and (min-width:701px) {
+    .footer_top .footer_top_card:first-child {
+        grid-column: 1/span 2;
+    }
+    .footer_top .footer_top_card:last-child {
+        justify-self: center;
+    }
+    .footer_top {
+        grid-template-columns: 40% 60%!important;
+        row-gap: 20px;
+    }
+}
+
+@media (max-width:1034px) {
+    .slider {
+        grid-template-columns: 100%;
+    }
+    .slider_photo {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width:1063px) {
+    .benefit {
+        grid-template-columns: 100%;
+        .benefit_img {
+            margin-top: 15px;
+        }
+    }
+}
+
+@media (max-width:1092px) {
+    .meal {
+        background-position: initial!important;
+    }
+}
+
+@media (max-width:1215px) {
+    .coaching_card_text {
+        padding: 0!important;
+    }
+}
+
+@media (max-width:1470px) {
+    .workout_cards_wrapper {
+        grid-template-columns: 100%;
+    }
 }
