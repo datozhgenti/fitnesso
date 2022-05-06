@@ -688,9 +688,9 @@ header {
     background-color: #cfddee;
     position: absolute;
     width: 100%;
-    top: 40%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    transform: rotate(2deg);
     h1 {
         color: #081158;
     }
@@ -717,10 +717,11 @@ header {
     @include font(20px);
     padding-bottom: 25px;
     border-bottom: 1px solid #dfdfdf;
+    flex-wrap: wrap;
+    row-gap: 10px;
 }
 
 .filter_btns a {
-    margin-left: 20px;
     padding: 12px 20px;
     font-weight: 900;
     text-transform: uppercase;
@@ -863,6 +864,12 @@ header {
     }
 }
 
+@media (max-width:382px) {
+    .filter_btns a {
+        font-size: 4vw!important;
+    }
+}
+
 @media (max-width:400px) {
     .cart {
         width: 70%!important;
@@ -910,6 +917,26 @@ header {
     }
 }
 
+@media (max-width:556px) {
+    .conact_form form {
+        grid-template-columns: 100%!important;
+        grid-template-rows: repeat(4, 43px) 130px!important;
+        textarea {
+            grid-area: initial;
+            padding-left: 10px;
+        }
+        input:last-child {
+            grid-area: initial!important;
+        }
+        input {
+            padding-left: 10px!important;
+        }
+    }
+    .conact_form {
+        padding: 20px;
+    }
+}
+
 @media (max-width:574px) {
     .coaching h2 {
         font-size: 10vw!important;
@@ -927,7 +954,7 @@ header {
 
 @media (max-width:632px) {
     .slider_text h2 {
-        font-size: 10vw!important;
+        font-size: 9vw!important;
     }
 }
 
@@ -947,6 +974,9 @@ header {
     .footer_top {
         grid-template-columns: 100%!important;
         row-gap: 40px;
+    }
+    .h_text h1 {
+        font-size: 10vw!important;
     }
 }
 
@@ -1040,6 +1070,10 @@ header {
 @media (max-width:1063px) {
     .benefit {
         grid-template-columns: 100%;
+        padding-top: 30px!important;
+        h2 {
+            margin-top: 50px!important;
+        }
         .benefit_img {
             margin-top: 15px;
         }

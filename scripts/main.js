@@ -22,6 +22,7 @@ $(document).ready(() => {
     </ul>
     </div>`);
 
+
     $(".burger_btn_wrapper").on("click", () => {
         var isOpen = $(".responsive_nav").hasClass("slideIn");
 
