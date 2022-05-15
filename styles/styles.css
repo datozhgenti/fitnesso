@@ -1165,6 +1165,18 @@ header {
           animation: slideOut .5s ease-in-out forwards;
 }
 
+.youtube {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 10;
+  padding: 20px;
+}
+
 @-webkit-keyframes slideIn {
   from {
     right: -100%;
@@ -1243,6 +1255,9 @@ header {
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
+  .cart {
+    right: 30px !important;
+  }
 }
 
 @media (max-width: 508px) {
@@ -1294,7 +1309,8 @@ header {
     grid-area: initial !important;
   }
   .conact_form form input {
-    padding-left: 10px !important;
+    padding-left: 10px;
+    height: 60px;
   }
   .conact_form {
     padding: 20px;
@@ -1342,6 +1358,12 @@ header {
   }
   .h_text h1 {
     font-size: 10vw !important;
+  }
+}
+
+@media (max-width: 720px) {
+  iframe {
+    width: 90% !important;
   }
 }
 
